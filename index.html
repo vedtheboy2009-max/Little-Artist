@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Free printable coloring pages for kids — animals, vehicles, nature, dinosaurs and more.">
+<title>Little Artists | Free Printable Coloring Pages</title>
+<style>
+:root{--ink:#283044;--pink:#ff7bac;--yellow:#ffda67;--blue:#8bdcf4;--mint:#a8efd0;--purple:#c7b5ff;--paper:#fffdf8}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Trebuchet MS",Arial,sans-serif}
+header{background:linear-gradient(120deg,#ffdfeb,#fff0b7,#d8f6ff);padding:20px 5% 34px;border-bottom:4px solid white}
+.top{max-width:1120px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{font-weight:1000;font-size:clamp(1.35rem,4vw,2rem);letter-spacing:-1px}.brand span{display:inline-grid;place-items:center;background:white;border-radius:16px;width:42px;height:42px;margin-right:8px}
+nav a{color:var(--ink);text-decoration:none;font-weight:800;margin-left:16px}
+.hero{max-width:1120px;margin:38px auto 0;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:24px}
+h1{font-size:clamp(2.1rem,6vw,4.2rem);line-height:1.03;letter-spacing:-2px;margin:0 0 14px}.hero p{font-size:1.1rem;line-height:1.6;max-width:570px}
+.pill{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:999px;padding:9px 15px;font-weight:900;box-shadow:3px 3px 0 var(--ink)}
+.hero-art{background:white;border:3px solid var(--ink);border-radius:34px;padding:18px;box-shadow:7px 7px 0 var(--ink);transform:rotate(2deg);text-align:center;font-size:6rem}
+main{max-width:1120px;margin:0 auto;padding:28px 5% 60px}
+.toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin:14px 0 22px}
+input,select{font:inherit;padding:12px 14px;border:2px solid #d9dce5;border-radius:14px;background:white;min-height:46px}
+input{flex:1;min-width:190px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.filter{border:2px solid var(--ink);background:white;border-radius:999px;padding:9px 14px;font-weight:800;cursor:pointer}.filter.active,.filter:hover{background:var(--yellow)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{background:white;border:2px solid var(--ink);border-radius:22px;padding:12px;box-shadow:4px 4px 0 #d9dce5;overflow:hidden}
+.thumb{height:190px;background:#fff9e9;border-radius:15px;display:grid;place-items:center;border:1px dashed #b8bdcb}
+.thumb img{width:100%;height:100%;object-fit:contain;padding:8px}
+.card h3{margin:12px 4px 5px;font-size:1.1rem}.card p{margin:0 4px 12px;color:#646b7b;font-size:.9rem}
+.actions{display:flex;gap:8px}.btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;text-decoration:none;border:2px solid var(--ink);border-radius:12px;padding:10px 12px;font-weight:900;color:var(--ink);background:var(--mint);cursor:pointer;flex:1}.btn.secondary{background:white}
+.note{margin-top:30px;background:#e8f8ff;border-radius:20px;padding:18px;line-height:1.6}
+footer{text-align:center;background:#fff0f6;padding:25px 5%;font-size:.9rem}
+@media(max-width:760px){.hero{grid-template-columns:1fr;margin-top:24px}.hero-art{font-size:4.5rem}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.thumb{height:150px}nav a{margin-left:8px}}
+@media(max-width:480px){.grid{grid-template-columns:1fr 1fr;gap:12px}.card{padding:8px}.thumb{height:125px}.card h3{font-size:1rem}.btn{font-size:.82rem;padding:9px 5px}.hero-art{display:none}}
+@media print{header,.toolbar,.filters,.actions,footer,.note{display:none!important}body{background:white}.grid{grid-template-columns:repeat(2,1fr)}.card{box-shadow:none;break-inside:avoid}.thumb{height:220px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="top">
+    <div class="brand"><span>🖍️</span>Little Artists</div>
+    <nav><a href="#pages">Coloring Pages</a><a href="#about">For Parents</a></nav>
+  </div>
+  <section class="hero">
+    <div>
+      <span class="pill">FREE PRINTABLE FUN ✨</span>
+      <h1>Big smiles.<br>Bright colours.</h1>
+      <p>Pick a picture, download your favourite coloring sheet, and let your imagination shine!</p>
+      <a class="btn" style="display:inline-flex;flex:0;padding:12px 20px;background:var(--pink)" href="#pages">Explore drawings ↓</a>
+    </div>
+    <div class="hero-art" aria-label="Cute art supplies">🖍️ 🐻<br>🌈 🖌️</div>
+  </section>
+</header>
+<main id="pages">
+  <h2 style="font-size:2rem;margin-bottom:4px">Find your next masterpiece 🎨</h2>
+  <p style="margin-top:0;color:#646b7b">Free black-and-white coloring pages ready to print on A4 paper.</p>
+  <div class="toolbar">
+    <input id="search" type="search" placeholder="Search animals, cars, flowers..." aria-label="Search coloring pages">
+    <select id="sort" aria-label="Sort drawings"><option value="default">Featured first</option><option value="az">Name A–Z</option></select>
+  </div>
+  <div class="filters" id="filters"></div>
+  <div class="grid" id="grid"></div>
+  <div class="note" id="about"><strong>💛 A note for grown-ups</strong><br>These starter pages are simple original line drawings made for this demo website. Print at “Fit to page” on A4 paper. Always supervise young children when using printers or art supplies.</div>
+</main>
+<footer>Made with 💛 for little imaginations · Little Artists</footer>
+<script>
+const drawings = [
+ {name:"Happy Cat",category:"Animals",emoji:"🐱",file:"cat.svg",desc:"A cute kitty to colour"},
+ {name:"Friendly Dog",category:"Animals",emoji:"🐶",file:"dog.svg",desc:"A playful puppy"},
+ {name:"Little Butterfly",category:"Nature",emoji:"🦋",file:"butterfly.svg",desc:"Wings full of possibilities"},
+ {name:"Sunny Flower",category:"Nature",emoji:"🌼",file:"flower.svg",desc:"A cheerful flower"},
+ {name:"Happy Car",category:"Vehicles",emoji:"🚗",file:"car.svg",desc:"A car ready for a colourful trip"},
+ {name:"Gentle Dinosaur",category:"Dinosaurs",emoji:"🦕",file:"dinosaur.svg",desc:"A friendly dino friend"},
+ {name:"Juicy Apple",category:"Food",emoji:"🍎",file:"apple.svg",desc:"A yummy fruit picture"},
+ {name:"Little House",category:"Everyday",emoji:"🏠",file:"house.svg",desc:"Design your dream home"},
+ {name:"Rainbow & Clouds",category:"Nature",emoji:"🌈",file:"rainbow.svg",desc:"A sky full of colour"}
+];
+const categories=["All","Animals","Vehicles","Dinosaurs","Nature","Food","Everyday"];
+let chosen="All";
+const grid=document.querySelector("#grid"),filters=document.querySelector("#filters");
+function renderFilters(){filters.innerHTML=categories.map(c=>`<button class="filter ${c===chosen?"active":""}" data-cat="${c}">${c==="All"?"✨ All pages":c}</button>`).join("");filters.querySelectorAll("button").forEach(b=>b.onclick=()=>{chosen=b.dataset.cat;renderFilters();render()})}
+function render(){
+ const term=document.querySelector("#search").value.toLowerCase();
+ let list=drawings.filter(d=>(chosen==="All"||d.category===chosen)&&(d.name+" "+d.category+" "+d.desc).toLowerCase().includes(term));
+ if(document.querySelector("#sort").value==="az")list.sort((a,b)=>a.name.localeCompare(b.name));
+ grid.innerHTML=list.length?list.map(d=>`<article class="card"><div class="thumb"><img loading="lazy" src="drawings/${d.file}" alt="${d.name} printable coloring page"></div><h3>${d.emoji} ${d.name}</h3><p>${d.desc}</p><div class="actions"><a class="btn" href="drawings/${d.file}" download="${d.name.toLowerCase().replaceAll(" ","-")}-coloring-page.svg">⬇ Download</a><a class="btn secondary" href="drawings/${d.file}" target="_blank" rel="noopener">🖨 Print</a></div></article>`).join(""):`<p>No pages found. Try another search.</p>`;
+}
+document.querySelector("#search").addEventListener("input",render);document.querySelector("#sort").addEventListener("change",render);
+renderFilters();render();
+</script>
+</body>
+</html>
