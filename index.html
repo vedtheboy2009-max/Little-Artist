@@ -63,17 +63,13 @@ footer{text-align:center;background:#fff0f6;padding:25px 5%;font-size:.9rem}
 </main>
 <footer>Made with 💛 for little imaginations · Little Artists</footer>
 <script>
-const drawings = [
- {name:"Happy Cat",category:"Animals",emoji:"🐱",file:"cat.svg",desc:"A cute kitty to colour"},
- {name:"Friendly Dog",category:"Animals",emoji:"🐶",file:"dog.svg",desc:"A playful puppy"},
- {name:"Little Butterfly",category:"Nature",emoji:"🦋",file:"butterfly.svg",desc:"Wings full of possibilities"},
- {name:"Sunny Flower",category:"Nature",emoji:"🌼",file:"flower.svg",desc:"A cheerful flower"},
- {name:"Happy Car",category:"Vehicles",emoji:"🚗",file:"car.svg",desc:"A car ready for a colourful trip"},
- {name:"Gentle Dinosaur",category:"Dinosaurs",emoji:"🦕",file:"dinosaur.svg",desc:"A friendly dino friend"},
- {name:"Juicy Apple",category:"Food",emoji:"🍎",file:"apple.svg",desc:"A yummy fruit picture"},
- {name:"Little House",category:"Everyday",emoji:"🏠",file:"house.svg",desc:"Design your dream home"},
- {name:"Rainbow & Clouds",category:"Nature",emoji:"🌈",file:"rainbow.svg",desc:"A sky full of colour"}
-];
+const drawings = Array.from({length: 30}, (_, i) => ({
+  name: `Colouring Page ${i + 1}`,
+  category: "All",
+  emoji: "🎨",
+  file: `drawings/Colouring_Page_${String(i + 1).padStart(2, "0")}.png`,
+  desc: "A fun colouring page for kids"
+}));
 const categories=["All","Animals","Vehicles","Dinosaurs","Nature","Food","Everyday"];
 let chosen="All";
 const grid=document.querySelector("#grid"),filters=document.querySelector("#filters");
